@@ -88,7 +88,7 @@ export const en = {
     heading: "Education",
     items: [
       {
-        school: "UNIFTEC",
+        school: "UniFTEC",
         degree: "Technologist in Systems Analysis and Development",
         dateRange: "2017 - 2021",
         achievements: [],

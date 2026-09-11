@@ -88,7 +88,7 @@ export const pt = {
     heading: "Formação",
     items: [
       {
-        school: "UNIFTEC",
+        school: "UniFTEC",
         degree: "Tecnólogo em Análise e Desenvolvimento de Sistemas",
         dateRange: "2017 - 2021",
         achievements: [],

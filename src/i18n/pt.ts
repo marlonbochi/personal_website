@@ -5,8 +5,8 @@ export const pt = {
   },
   nav: {
     about: "Sobre",
-    projects: "Projetos",
     experience: "Experiência",
+    projects: "Projetos",
     education: "Formação",
   },
   hero: {

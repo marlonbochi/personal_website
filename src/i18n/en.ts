@@ -5,8 +5,8 @@ export const en = {
   },
   nav: {
     about: "About",
-    projects: "Projects",
     experience: "Experience",
+    projects: "Projects",
     education: "Education",
   },
   hero: {

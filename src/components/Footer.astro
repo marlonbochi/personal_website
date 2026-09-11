@@ -130,22 +130,22 @@ const { t, site, hasProjects, hasExperience, hasEducation } = Astro.props;
             >{t.nav.about}</a
           >
           {
-            hasProjects && (
-              <a
-                href="#projects"
-                class="text-sm text-gray-600 hover:text-gray-800 transition-colors"
-              >
-                {t.nav.projects}
-              </a>
-            )
-          }
-          {
             hasExperience && (
               <a
                 href="#experience"
                 class="text-sm text-gray-600 hover:text-gray-800 transition-colors"
               >
                 {t.nav.experience}
+              </a>
+            )
+          }
+          {
+            hasProjects && (
+              <a
+                href="#projects"
+                class="text-sm text-gray-600 hover:text-gray-800 transition-colors"
+              >
+                {t.nav.projects}
               </a>
             )
           }

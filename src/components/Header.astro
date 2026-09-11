@@ -31,18 +31,6 @@ const { t, hasProjects, hasExperience, hasEducation } = Astro.props;
         </a>
       </li>
       {
-        hasProjects && (
-          <li>
-            <a
-              href="#projects"
-              class="text-gray-700 hover:text-black transition-colors font-medium"
-            >
-              {t.nav.projects}
-            </a>
-          </li>
-        )
-      }
-      {
         hasExperience && (
           <li>
             <a
@@ -50,6 +38,18 @@ const { t, hasProjects, hasExperience, hasEducation } = Astro.props;
               class="text-gray-700 hover:text-black transition-colors font-medium"
             >
               {t.nav.experience}
+            </a>
+          </li>
+        )
+      }
+      {
+        hasProjects && (
+          <li>
+            <a
+              href="#projects"
+              class="text-gray-700 hover:text-black transition-colors font-medium"
+            >
+              {t.nav.projects}
             </a>
           </li>
         )

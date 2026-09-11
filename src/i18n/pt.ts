@@ -5,6 +5,7 @@ export const pt = {
   },
   nav: {
     about: "Sobre",
+    projects: "Projetos",
     experience: "Experiência",
     education: "Formação",
   },
@@ -16,6 +17,19 @@ export const pt = {
   about: {
     heading: "Sobre Mim",
     bio: "Engenheiro Full Stack com 14 anos de experiência arquitetando e entregando aplicações web e plataformas SaaS de ponta a ponta, da ideia à produção. Perfil generalista com atuação em PHP, TypeScript, React, Node.js e infraestrutura em nuvem (AWS), com experiência prática em bancos de dados relacionais e NoSQL (MySQL, PostgreSQL, MongoDB), integrações com APIs de terceiros e conhecimento crescente em Python. Histórico de liderança de iniciativas, mentoria de engenheiros e adoção de práticas modernas de engenharia — incluindo fluxos de desenvolvimento assistidos por IA (Claude Code, Codex). Forte comunicador escrito e verbal em inglês, com facilidade para conduzir projetos em toda a stack em ambientes de startup dinâmicos e multidisciplinares.",
+  },
+  projects: {
+    heading: "Projetos",
+    items: [
+      {
+        name: "AI Personal Trainer",
+        description:
+          "PWA com IA que gera um plano de treino e nutrição personalizado a partir de uma breve consulta, usando o Google Gemini para gerar as recomendações de treino e nutrição.",
+        link: "https://aitrainer.marlonbochi.com.br",
+        repo: "https://github.com/marlonbochi/ai-personal-trainer",
+        skills: ["Next.js", "Google Gemini", "PWA", "Vercel"],
+      },
+    ],
   },
   experience: {
     heading: "Experiência",

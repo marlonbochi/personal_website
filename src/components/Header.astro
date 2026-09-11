@@ -1,13 +1,19 @@
 ---
 interface Props {
   t: {
-    nav: { about: string; experience: string; education: string };
+    nav: {
+      about: string;
+      projects: string;
+      experience: string;
+      education: string;
+    };
   };
+  hasProjects: boolean;
   hasExperience: boolean;
   hasEducation: boolean;
 }
 
-const { t, hasExperience, hasEducation } = Astro.props;
+const { t, hasProjects, hasExperience, hasEducation } = Astro.props;
 ---
 
 <header
@@ -24,6 +30,18 @@ const { t, hasExperience, hasEducation } = Astro.props;
           {t.nav.about}
         </a>
       </li>
+      {
+        hasProjects && (
+          <li>
+            <a
+              href="#projects"
+              class="text-gray-700 hover:text-black transition-colors font-medium"
+            >
+              {t.nav.projects}
+            </a>
+          </li>
+        )
+      }
       {
         hasExperience && (
           <li>

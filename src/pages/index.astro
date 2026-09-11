@@ -1,0 +1,39 @@
+---
+import { site } from "../data/site";
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>{site.name}</title>
+    <script is:inline>
+      (function () {
+        var lang;
+        try {
+          lang = localStorage.getItem("preferredLang");
+        } catch (e) {
+          lang = null;
+        }
+        if (lang !== "en" && lang !== "pt") {
+          var nav =
+            (navigator.language || navigator.userLanguage || "").toLowerCase();
+          lang = nav.indexOf("pt") === 0 ? "pt" : "en";
+        }
+        window.location.replace(
+          "/" + lang + "/" + window.location.search + window.location.hash
+        );
+      })();
+    </script>
+  </head>
+  <body>
+    <noscript>
+      <meta http-equiv="refresh" content="0; url=/en/" />
+      <p>
+        Redirecting…
+        <a href="/en/">Click here if you are not redirected (English)</a> |
+        <a href="/pt/">Clique aqui se não for redirecionado (Português)</a>
+      </p>
+    </noscript>
+  </body>
+</html>

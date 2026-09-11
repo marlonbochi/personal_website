@@ -1,0 +1,41 @@
+---
+import type { Lang } from "../i18n/languages";
+
+interface Props {
+  lang: Lang;
+}
+
+const { lang } = Astro.props;
+
+// The flag shown is the flag of the language you'll switch TO.
+const targetLang: Lang = lang === "en" ? "pt" : "en";
+const flag = targetLang === "pt" ? "🇧🇷" : "🇺🇸";
+const ariaLabel =
+  lang === "en" ? "Mudar para Português" : "Switch to English";
+---
+
+<a
+  href={`/${targetLang}/`}
+  id="lang-switcher"
+  data-target-lang={targetLang}
+  aria-label={ariaLabel}
+  title={ariaLabel}
+  class="fixed top-4 right-4 md:top-6 md:right-8 z-50 flex items-center gap-2 rounded-full bg-white/90 backdrop-blur-sm border border-gray-200 shadow-sm px-3 py-2 text-sm font-medium text-gray-700 hover:shadow-md hover:border-gray-300 hover:-translate-y-0.5 transition-all duration-300"
+>
+  <span class="text-lg leading-none" aria-hidden="true">{flag}</span>
+  <span class="hidden sm:inline">{targetLang.toUpperCase()}</span>
+</a>
+
+<script>
+  document.querySelectorAll<HTMLAnchorElement>("#lang-switcher").forEach((el) => {
+    el.addEventListener("click", () => {
+      const target = el.dataset.targetLang;
+      if (!target) return;
+      try {
+        localStorage.setItem("preferredLang", target);
+      } catch {
+        // ignore storage errors (e.g. private browsing)
+      }
+    });
+  });
+</script>
